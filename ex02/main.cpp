@@ -9,6 +9,11 @@ int main(int ac, char **av) {
 	std::deque<int> result2;
 	PmergeMe p;
 
+	if (ac == 1) {
+		std::cout << "Error";
+		return 1;
+	}
+
 	for (int i = 1; i < ac; i++) {
 		if (atoi(av[i]) < 0) {
 			std::cout << "Error" << std::endl;
